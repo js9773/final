@@ -1,0 +1,9 @@
+﻿Honestly at this very moment I am quite hungry (probably because I didnt eat breakfast), so I thought about food immediately when I was told to brainstorm for my final project. 
+For my last assignment I cooperated the sound of frying bacon and I found myself very intrigued by different sounds generated throughout the cooking process. Basically any cooking sound would make me think about delicious food and make me extra happy. I think it would be cool to use “food” and “food sounds” as some of the elements for my final project. 
+Since I want to use food in my project, naturally I thought about Ratatouille the movie. I remember I fell in love with that movie after the first time I watched it.  I remember this one scene from the movie where Jimmy(the name of the lead??) bites into a strawberry and a piece of cheese and in the background different colors and music are generated at the same time. I was and still is beautiful to me. So I looked up the gif of that scene and I think it could serve as a very good inspiration for my project because now I see a connection between color and the music.
+
+
+Final Prototype
+For the final project i would incorporate both dom and sound library. Instead of doing food related project, I would be focusing more on the image side. The goal is to generate image/animation as the music goes on.
+The image should change responding to the music.
+I shall also put some other image pattern so that the composition would be more dynamic.
