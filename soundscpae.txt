@@ -1,0 +1,196 @@
+//Final Project
+//BY Jessica Song
+
+//work consulted: https://www.openprocessing.org/sketch/467375
+
+
+
+var button,b2,b3,b4;
+var summer,amp1,lv;
+var size1,size2;//sound1
+
+var water = [];//river
+var count = 100;
+
+
+
+
+function setup(){
+	createCanvas(800,350);
+	
+	ellipseMode(CENTER);
+	
+	//sound
+	summer = loadSound("Onesummersday.mp3");
+	
+	//button1
+	button = createButton('play');
+	button.position(20,270);
+	button.mousePressed(sound1);
+
+	//button2
+	b2 = createButton('river');
+	b2.position(20,200);
+	b2.mousePressed(river);
+	
+	//button3
+	b3 = createButton('plant');
+	b3.position(20,235);
+	b3.mousePressed(plant);
+	
+	
+	//button4
+	b4 = createButton('pause');
+	b4.position(70,270)
+	b4.mousePressed(soundP);
+	
+	
+	//
+	amp1 = new p5.Amplitude();
+	
+	
+	
+	//
+
+for(var i=0; i<count; i = i+1) {
+    var xPosition = map(i, 0, count, 0, 800);
+  water.push(xPosition);
+  }
+
+
+}
+
+function draw(){
+	
+	//
+	//background(0);
+	//for(var i=0; i < water.length; i = i+1) {
+    
+  //var alphaValue = map(i, 0, water.length, 10, 100);
+  //fill(80, 231, 243, alphaValue);
+    
+  //var Sin = sin(i*0.1 + frameCount*0.3);
+    
+  //var ellipseSize = map(mySin, -1, 1, 10, 50);
+  //ellipse(water[i], 300,  ellipseSize, ellipseSize); }
+
+
+	
+	//
+	lv = amp1.getLevel();
+	size1 = map(lv,0,1,0,350);
+	size2 = map(lv,0,1,0,200);
+	
+	
+	
+	fill(random(34,169),random(138,223),random(164,237));
+	noStroke();
+	ellipse(730,210,size1*4,size1*4);
+	ellipse(110,50,size1*2,size1*2);
+	ellipse(280,335,size1*6,size1*6);
+	ellipse(520,100,size1,size1);
+  ellipse(670,20,size1/2,size1/2);
+	
+	//
+	fill(random(227,255),random(2,198),random(103,223));
+	ellipse(440,279,size1/0.5,size1/0.5);
+	ellipse(88,187,size1/2,size1/2);
+	ellipse(210,88,size1/2,size1/2);
+	ellipse(420,20,size1,size1);
+	ellipse(620,130,size1,size1);
+	
+	//
+	noFill();
+	stroke(255,random(206,227),random(38,132));
+	ellipse(30,133,size2,size2);
+	ellipse(232,189,size2*2,size2*2);
+	ellipse(104,271,size2,size2);
+	ellipse(630,210,size2,size2);
+	ellipse(513,288,size2*2,size2*2);
+	ellipse(780,20,size2,size2);
+
+	
+	//
+
+	
+}
+
+
+	function plant(){
+
+	
+	noStroke();
+	fill(149,162,253,30);
+
+
+	ellipse(size1+50,size2+random(0,height/2+40),random(0,15),random(0,15));
+	ellipse(size1+150,size2+random(0,height/2-30),random(0,15),random(0,15));
+	ellipse(size1+200,size2+random(0,height/2+10),random(0,15),random(0,15));
+	ellipse(size1+250,size2+random(0,height/2),random(0,15),random(0,15));
+	ellipse(size1+300,size2+random(0,height/2+60),random(0,15),random(0,15));
+	ellipse(size1+350,size2+random(0,height/2-20),random(0,15),random(0,15));
+	ellipse(size1+400,size2+random(0,height/2+10),random(0,15),random(0,15));
+	ellipse(size1+450,size2+random(0,height/2+70),random(0,15),random(0,15));
+	ellipse(size1+500,size2+random(0,height/2-50),random(0,15),random(0,15));
+	ellipse(size1+550,size2+random(0,height/2+10),random(0,15),random(0,15));
+	ellipse(size1+600,size2+random(0,height/2-60),random(0,15),random(0,15));
+	ellipse(size1+650,size2+random(0,height/2-20),random(0,15),random(0,15));
+	ellipse(size1+700,size2+random(0,height/2),random(0,15),random(0,15));
+	ellipse(size1+750,size2+random(0,height/2+80),random(0,15),random(0,15));
+	ellipse(size1+800,size2+random(0,height/2-70),random(0,15),random(0,15));
+	
+	
+	
+//
+	noStroke();
+	fill(94,114,251,30);
+	ellipse(size2+25,size1+random(0,height-40),random(0,15),random(0,15));
+	ellipse(size2+75,size1+random(0,height-20),random(0,15),random(0,15));
+	ellipse(size2+125,size1+random(0,height-60),random(0,15),random(0,15));
+	ellipse(size2+175,size1+random(0,height),random(0,15),random(0,15));
+	ellipse(size2+225,size1+random(0,height-10),random(0,15),random(0,15));
+	ellipse(size2+275,size1+random(0,height-80),random(0,15),random(0,15));
+	ellipse(size2+325,size1+random(0,height-30),random(0,15),random(0,15));
+	ellipse(size2+375,size1+random(0,height-50),random(0,15),random(0,15));
+	ellipse(size2+425,size1+random(0,height-90),random(0,15),random(0,15));
+	ellipse(size2+475,size1+random(0,height-30),random(0,15),random(0,15));
+	ellipse(size2+525,size1+random(0,height),random(0,15),random(0,15));
+	ellipse(size2+575,size1+random(0,height-70),random(0,15),random(0,15));
+	ellipse(size2+625,size1+random(0,height-40),random(0,15),random(0,15));
+	ellipse(size2+675,size1+random(0,height-50),random(0,15),random(0,15));
+	ellipse(size2+725,size1+random(0,height-10),random(0,15),random(0,15));
+	ellipse(size2+775,size1+random(0,height-60),random(0,15),random(0,15));
+	
+	}
+
+	
+									
+
+
+function sound1(){
+	summer.play();	
+}
+
+function soundP(){
+	if (b4.mousePressed === true){
+	summer.paused();
+	}else{
+		summer.play();	
+	}
+}
+
+
+function river(){
+	background(0);
+	for(var i=0; i < water.length; i = i+1) {
+    
+    var alphaValue = map(i, 0, water.length, 10, 100);
+		noStroke();
+    fill(80, 231, 243, alphaValue);
+    
+    var Sin = sin(i*0.1 + frameCount*0.3);
+    
+    var ellipseSize = map(Sin, -1, 1, 10, 50);
+  	ellipse(water[i], 300,  ellipseSize, ellipseSize);
+  }
+}
